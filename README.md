@@ -1,13 +1,25 @@
 <img width="256" align="right" src="https://github.com/hermit-os/.github/blob/main/logo/hermit-logo.svg" />
 
-# Hermit Kernel
+# Hermit Kernel — Experimental Channel
 
 [![Documentation](https://img.shields.io/badge/docs-latest-blue.svg)](https://hermit-os.github.io/kernel)
+![Channel](https://img.shields.io/badge/channel-experimental-ff7b72)
+![Version](https://img.shields.io/badge/version-0.13.0--experimental-blue)
 ![License](https://img.shields.io/badge/license-MIT%2FApache--2.0-blue)
 [![Zulip Badge](https://img.shields.io/badge/chat-hermit-57A37C?logo=zulip)](https://hermit.zulipchat.com/)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.14645534.svg)](https://doi.org/10.5281/zenodo.14645534)
 
-This is the kernel of the [Hermit](https://github.com/hermit-os) unikernel project.
+> 🚀 **Just launched!** The Experimental channel of the Hermit kernel is now live.
+> This is where the wild ideas land first.
+
+This is the **experimental** kernel of the [Hermit](https://github.com/hermit-os) unikernel project.
+
+**Version:** `0.13.0-experimental`
+
+The experimental channel is for bleeding-edge features, prototypes, and radical
+refactors that may be unstable, unfinished, or change without notice. It is **not
+recommended for production** — use it to try things out, reproduce bugs on the
+cutting edge, or contribute to in-progress work.
 
 For details, see the [docs].
 
@@ -17,13 +29,16 @@ For details, see the [docs].
 
 * [`rustup`](https://www.rust-lang.org/tools/install)
 
+> The toolchain version is pinned per repository via `rust-toolchain.toml`, so
+> `rustup` will automatically fetch and use the required nightly compiler — no
+> manual override is needed.
+
 ## Building the kernel
 
 Usually the kernel will be linked as static library to your applications.
 
 - **Rust applications:** Instructions can be found in the [hermit-rs](https://github.com/hermit-os/hermit-rs) repository.
 - **For C/C++ applications:** Instructions can be found in the [hermit-c](https://github.com/hermit-os/hermit-c) repository.
- 
 
 ### Standalone static library build
 
@@ -33,7 +48,7 @@ cargo xtask build --arch x86_64
 
 On completion, the script will print the path of `libhermit.a`.
 If you want to build the kernel for aarch64, please replace `x86_64` by `aarch64`.
-If you want to build the kernel for riscv64, please use `riscv64`. 
+If you want to build the kernel for riscv64, please use `riscv64`.
 
 ### Control the kernel messages verbosity
 
@@ -48,12 +63,19 @@ If the variable is not set, cannot be parsed, or it does not provide a global le
 
 > [!NOTE]
 > Although the logger only prints name of the lowest level for the kernel
-  modules, the match filter requires paths to start from the root, i.e. in the
-  format `hermit::MODULE_NAME::SUBMODULE_NAME`.
+> modules, the match filter requires paths to start from the root, i.e. in the
+> format `hermit::MODULE_NAME::SUBMODULE_NAME`.
 
 ```sh
 $ HERMIT_LOG_LEVEL_FILTER="hermit::drivers::net=debug,smoltcp,error" cargo xtask build --arch x86_64
 ```
+
+## Channels
+
+This repository is the **experimental** channel. For something tamer:
+
+* [`kernel-stable`](https://github.com/Notnurb/kernel-stable) — production-ready releases.
+* [`kernel-nightly`](https://github.com/Notnurb/kernel-nightly) — nightly development snapshots.
 
 ## Credits
 
@@ -82,4 +104,3 @@ Unless you explicitly state otherwise, any contribution intentionally submitted 
 
 The kernel is being developed on [hermit-os/kernel](https://github.com/hermit-os/kernel).
 Create your own fork, send us a pull request, and chat with us on [Zulip](https://hermit.zulipchat.com/).
-# kernel-experimental
