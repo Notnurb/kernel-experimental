@@ -1,10 +1,10 @@
 <img width="256" align="right" src="https://github.com/hermit-os/.github/blob/main/logo/hermit-logo.svg" />
 
-# Hermit Kernel — Experimental Channel
+# Prism Kernel — Experimental Channel (v0.0.1-e1)
 
 [![Documentation](https://img.shields.io/badge/docs-latest-blue.svg)](https://hermit-os.github.io/kernel)
 ![Channel](https://img.shields.io/badge/channel-experimental-ff7b72)
-![Version](https://img.shields.io/badge/version-0.13.0--experimental-blue)
+![Version](https://img.shields.io/badge/version-0.0.1%20e1-blue)
 ![License](https://img.shields.io/badge/license-MIT%2FApache--2.0-blue)
 [![Zulip Badge](https://img.shields.io/badge/chat-hermit-57A37C?logo=zulip)](https://hermit.zulipchat.com/)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.14645534.svg)](https://doi.org/10.5281/zenodo.14645534)
@@ -12,9 +12,9 @@
 > 🚀 **Just launched!** The Experimental channel of the Hermit kernel is now live.
 > This is where the wild ideas land first.
 
-This is the **experimental** kernel of the [Hermit](https://github.com/hermit-os) unikernel project.
+This is the **experimental** channel of **Prism**, a Rust-based library operating system (unikernel).
 
-**Version:** `0.13.0-experimental`
+**Version:** `0.0.1-e1`
 
 The experimental channel is for bleeding-edge features, prototypes, and radical
 refactors that may be unstable, unfinished, or change without notice. It is **not
